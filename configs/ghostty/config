@@ -1,0 +1,29 @@
+theme = green-eye-care
+font-family = MesloLGS Nerd Font
+font-size = 14
+
+# 快速终端 (Cmd+` 呼出/隐藏)
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+# 滚动缓冲区加大，方便看长日志
+scrollback-limit = 100000
+
+# 光标样式
+cursor-style = block
+
+# 窗口
+window-padding-x = 4
+window-padding-y = 4
+window-save-state = always
+
+# 关闭 tab/窗口时不再提示确认
+confirm-close-surface = false
+
+#选中文字自动复制
+copy-on-select = clipboard
+
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = bell
+
+clipboard-read = allow
+clipboard-write = allow
