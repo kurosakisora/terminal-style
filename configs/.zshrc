@@ -35,7 +35,7 @@ alias ls='lsd'
 alias ll='lsd -la'
 alias lt='lsd --tree'
 alias cd='z'
-alias cat='bat'
+alias cat='bat --style=plain --paging=never'
 alias abc='q'
 
 # ─── Proxy helper ───────────────────────────────────────────────────
