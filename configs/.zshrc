@@ -4,7 +4,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ─── Zsh plugins (via Homebrew) ──────────────────────────────────────
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -u
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
