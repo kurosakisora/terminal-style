@@ -29,6 +29,7 @@ alias ll='lsd -la'
 alias lt='lsd --tree'
 alias cd='z'
 alias cat='bat'
+alias abc='q'
 
 # ─── Proxy helper ───────────────────────────────────────────────────
 proxy () {
