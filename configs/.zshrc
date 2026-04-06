@@ -8,6 +8,13 @@ autoload -Uz compinit && compinit -u
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# ─── 修复 Ghostty 首次启动 Ctrl+E 产生 ;5;13~ 乱码 ─────────────────
+# Ghostty 的 modifyOtherKeys 协议会发送增强键序列，需要额外绑定
+if [[ "$TERM" == "xterm-ghostty" ]]; then
+    bindkey '\e[101;5u' end-of-line    # Ctrl+E (kitty protocol / CSI u)
+    bindkey '\e[27;5;101~' end-of-line # Ctrl+E (modifyOtherKeys)
+fi
+
 # ─── History ─────────────────────────────────────────────────────────
 HISTSIZE=50000
 SAVEHIST=50000
