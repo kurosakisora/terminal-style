@@ -28,7 +28,7 @@ eval "$(starship init zsh)"
 source <(fzf --zsh)
 
 # ─── Zoxide (smart cd) ──────────────────────────────────────────────
-eval "$(zoxide init zsh)"
+if [[ $- == *i* ]]; then eval "$(zoxide init zsh)"; fi
 
 # ─── Aliases ─────────────────────────────────────────────────────────
 alias ls='lsd'
@@ -49,3 +49,6 @@ proxy () {
 
 # ─── Extra PATH ─────────────────────────────────────────────────────
 export PATH="/opt/homebrew/opt/mysql-client/bin:$HOME/.local/bin:$PATH"
+
+alias kiro='kiro-cli chat --trust-all-tools'
+

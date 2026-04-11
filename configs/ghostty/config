@@ -27,3 +27,4 @@ notify-on-command-finish-action = bell
 
 clipboard-read = allow
 clipboard-write = allow
+scrollback-limit = 500000
