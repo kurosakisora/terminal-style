@@ -5,8 +5,11 @@ font-size = 14
 # 快速终端 (Cmd+` 呼出/隐藏)
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 
-# 滚动缓冲区加大，方便看长日志
-scrollback-limit = 100000
+# Cmd+L 新建 tab（习惯键位）
+keybind = cmd+l=new_tab
+
+# 滚动缓冲区加大，方便看长日志（单位是字节，100MB ≈ 几百万行）
+scrollback-limit = 100000000
 
 # 光标样式
 cursor-style = block
@@ -27,4 +30,3 @@ notify-on-command-finish-action = bell
 
 clipboard-read = allow
 clipboard-write = allow
-scrollback-limit = 500000

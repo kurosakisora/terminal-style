@@ -15,6 +15,10 @@ if [[ "$TERM" == "xterm-ghostty" ]]; then
     bindkey '\e[27;5;101~' end-of-line # Ctrl+E (modifyOtherKeys)
 fi
 
+# ─── Word style: 让 Alt+Backspace 以 / . - 等为边界删除 ────────────
+autoload -U select-word-style
+select-word-style bash
+
 # ─── History ─────────────────────────────────────────────────────────
 HISTSIZE=50000
 SAVEHIST=50000
@@ -51,4 +55,3 @@ proxy () {
 export PATH="/opt/homebrew/opt/mysql-client/bin:$HOME/.local/bin:$PATH"
 
 alias kiro='kiro-cli chat --trust-all-tools'
-
